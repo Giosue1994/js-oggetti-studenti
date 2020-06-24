@@ -1,13 +1,7 @@
 $(document).ready(function() {
-
 //   - Creare un oggetto che descriva uno studente con le
 //     seguenti proprietà: nome, cognome e età. Stampare a
 //     schermo attraverso il for in tutte le proprietà.
-//   - Creare un array di oggetti di studenti. Ciclare su tutti gli
-//     studenti e stampare per ognuno nome e cognome
-//   - Dare la possibilità all’utente attraverso 3 prompt di
-//     aggiungere un nuovo oggetto studente inserendo
-//     nell’ordine: nome, cognome e età.
 
 var studente = {
   "nome": "Gianfilibero",
@@ -19,6 +13,9 @@ for (var key in studente) {
   console.log(studente[key]);
 }
 
+
+//   - Creare un array di oggetti di studenti. Ciclare su tutti gli
+//     studenti e stampare per ognuno nome e cognome
 
 var studenti = [
   {
@@ -46,11 +43,22 @@ for (var i = 0; i < studenti.length; i++) {
 
 }
 
+//   - Dare la possibilità all’utente attraverso 3 prompt di
+//     aggiungere un nuovo oggetto studente inserendo
+//     nell’ordine: nome, cognome e età.
 
+var inserisciNome = prompt('Inserisci il tuo nome');
+var inserisciCognome = prompt('Inserisci il tuo cognome');
+var inserisciEta = parseInt(prompt('Inserisci la tua età'));
 
+var nuovoStudente = {
+  "nome": inserisciNome,
+  "cognome": inserisciCognome,
+  "eta": inserisciEta
+}
 
-// var inserisciNome = prompt('Inserisci il tuo nome');
-// var inserisciCognome = prompt('Inserisci il tuo cognome');
-// var inserisciEta = prompt('Inserisci la tua età');
+studenti.push(nuovoStudente);
+
+console.log(studenti);
 
 });
