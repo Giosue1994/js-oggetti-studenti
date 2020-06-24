@@ -15,6 +15,11 @@ var studente = {
   "eta": 76
 }
 
+for (var key in studente) {
+  console.log(studente[key]);
+}
+
+
 var studenti = [
   {
     "nome": "Camilla",
@@ -33,18 +38,16 @@ var studenti = [
   }
 ]
 
-for (var key in studente) {
-  console.log(studente[key]);
-}
-
 for (var i = 0; i < studenti.length; i++) {
   var dettagliStudente = studenti[i];
 
-  for (var key2 in dettagliStudente) {
-    console.log(dettagliStudente[key2]);
-    
-  }
+  console.log('Nome studente: ' + dettagliStudente.nome);
+  console.log('Cognome studente: ' + dettagliStudente.cognome);
+
 }
+
+
+
 
 // var inserisciNome = prompt('Inserisci il tuo nome');
 // var inserisciCognome = prompt('Inserisci il tuo cognome');
